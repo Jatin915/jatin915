@@ -16,7 +16,7 @@
 ## 🌟 About Me
 - ⚡ **Currently working on:** Building web apps with **React.js** & **Node.js**.  
 - 🤝 **Open to collaborate on:** Exciting projects and hackathons.  
-- 🌱 **Learning:** Almost Completed ReactJS and Now Starting With NodeJS.
+- 🌱 **Learning:** Almost completed ReactJS and now starting with NodeJS.
 
 ---
 
