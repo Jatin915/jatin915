@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="820" height="320" viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated GitHub stats">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#00F7FF"/>
+      <stop offset="1" stop-color="#FF00C8"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <style type="text/css"><![CDATA[
+      .bg { fill: #0f1115; }
+      .card { fill: #0b0d10; stroke: #1f2430; stroke-width: 1; rx:12; ry:12; }
+      .title { font-family: 'Inter', 'Segoe UI', Roboto, Arial; font-size:18px; fill:#E6EEF3; font-weight:700; }
+      .sub { font-family: 'Inter', Arial; font-size:13px; fill:#9fb4c6; }
+      .num { font-family: 'Fira Code', monospace; font-size:26px; fill:#FFFFFF; font-weight:700; }
+      .muted { font-family: 'Inter', Arial; font-size:12px; fill:#9fb4c6; }
+    ]]></style>
+  </defs>
+
+  <!-- background -->
+  <rect class="bg" x="0" y="0" width="820" height="320" rx="12" ry="12"/>
+
+  <!-- left big card -->
+  <g transform="translate(28,28)">
+    <rect class="card" x="0" y="0" width="480" height="260"/>
+    <!-- ring container -->
+    <g transform="translate(100,130)">
+      <!-- background ring -->
+      <circle cx="0" cy="0" r="70" stroke="#172029" stroke-width="14" fill="none" />
+      <!-- animated gradient ring -->
+      <circle cx="0" cy="0" r="70" stroke="url(#g1)" stroke-width="14" stroke-linecap="round" fill="none"
+        stroke-dasharray="440"
+        stroke-dashoffset="440">
+        <!-- draw the ring -->
+        <animate attributeName="stroke-dashoffset"
+                 from="440" to="44"
+                 dur="1.8s" begin="0.2s" fill="freeze" />
+        <!-- small glow -->
+        <set attributeName="filter" to="url(#glow)" begin="0.2s" fill="freeze" />
+      </circle>
+
+      <!-- center label (letter grade or icon) -->
+      <text class="num" x="-10" y="10" text-anchor="middle" fill="#DFFFD8" font-size="36" opacity="0">
+        C
+        <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="1.6s" fill="freeze"/>
+      </text>
+    </g>
+
+    <!-- stats block title -->
+    <text class="title" x="220" y="40" text-anchor="start">gJatin's GitHub Stats</text>
+
+    <!-- stat lines (fade in sequence) -->
+    <!-- Total Stars -->
+    <g transform="translate(220,64)" opacity="0">
+      <text class="sub" x="0" y="0">⭐ Total Stars Earned:</text>
+      <text class="num" x="240" y="0" text-anchor="end">1</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="1.9s" fill="freeze"/>
+    </g>
+
+    <!-- Total Commits -->
+    <g transform="translate(220,102)" opacity="0">
+      <text class="sub" x="0" y="0">⏱️ Total Commits (2025):</text>
+      <text class="num" x="240" y="0" text-anchor="end">130</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.2s" fill="freeze"/>
+    </g>
+
+    <!-- Total PRs -->
+    <g transform="translate(220,140)" opacity="0">
+      <text class="sub" x="0" y="0">🔀 Total PRs:</text>
+      <text class="num" x="240" y="0" text-anchor="end">0</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.5s" fill="freeze"/>
+    </g>
+
+    <!-- Total Issues -->
+    <g transform="translate(220,178)" opacity="0">
+      <text class="sub" x="0" y="0">❗ Total Issues:</text>
+      <text class="num" x="240" y="0" text-anchor="end">0</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.8s" fill="freeze"/>
+    </g>
+
+    <!-- Contributed to (last year) -->
+    <g transform="translate(220,216)" opacity="0">
+      <text class="sub" x="0" y="0">📦 Contributed to (last year):</text>
+      <text class="num" x="240" y="0" text-anchor="end">0</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="3.1s" fill="freeze"/>
+    </g>
+  </g>
+
+  <!-- right three stat cards -->
+  <g transform="translate(540,28)">
+    <rect class="card" x="0" y="0" width="240" height="120"/>
+    <rect class="card" x="0" y="140" width="240" height="148"/>
+
+    <!-- top small cards (Total contributions / Current streak / Longest) -->
+    <!-- total contributions row -->
+    <g transform="translate(12,12)" opacity="0">
+      <text class="muted" x="0" y="0">Total Contributions</text>
+      <text class="num" x="120" y="36" text-anchor="middle">144</text>
+      <text class="sub" x="0" y="58">Mar 15, 2022 - Present</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="3.4s" fill="freeze"/>
+    </g>
+
+    <!-- current streak in the circle (in lower card) -->
+    <g transform="translate(12,152)" opacity="0">
+      <text class="muted" x="0" y="0">Current Streak</text>
+      <!-- small ring for current streak -->
+      <g transform="translate(50,65)">
+        <circle cx="0" cy="0" r="36" stroke="#172029" stroke-width="10" fill="none"/>
+        <circle cx="0" cy="0" r="36" stroke="url(#g1)" stroke-width="10" stroke-linecap="round" fill="none"
+          stroke-dasharray="226"
+          stroke-dashoffset="226">
+          <animate attributeName="stroke-dashoffset" from="226" to="56" dur="1.4s" begin="3.5s" fill="freeze"/>
+        </circle>
+        <text class="num" x="0" y="8" text-anchor="middle" font-size="20" fill="#DFFFD8">2</text>
+      </g>
+
+      <text class="sub" x="110" y="60">Aug 12 - Aug 13</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="3.7s" fill="freeze"/>
+    </g>
+
+    <!-- longest streak -->
+    <g transform="translate(12,220)" opacity="0">
+      <text class="muted" x="0" y="0">Longest Streak</text>
+      <text class="num" x="120" y="36" text-anchor="middle">7</text>
+      <text class="sub" x="0" y="58">Jun 6 - Jun 12</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="3.9s" fill="freeze"/>
+    </g>
+  </g>
+
+  <!-- bottom divider -->
+  <line x1="36" y1="292" x2="784" y2="292" stroke="#1f2430" stroke-width="2" opacity="0.9"/>
+  
+  <!-- small footer text -->
+  <text x="36" y="312" class="muted">✨ Animated SVG: ring drawing + fade-in stats — paste this file in your repo and reference its raw URL in your README.</text>
+</svg>
