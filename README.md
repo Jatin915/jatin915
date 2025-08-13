@@ -5,7 +5,9 @@
   <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="100%" height="300px" />
 </p>
 
-<h1 align="center">Hi! 👋 I'm Jatin</h1>
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=36&pause=800&color=00F7FF&center=true&vCenter=true&width=600&lines=Hey!+%F0%9F%91%8B+I'm+Jatin" alt="Typing Animation">
+</h1>
 <h3 align="center">💻 Full-Stack Developer | 🏆 DSA in Java | 🤖 AI Innovator</h3>
 <p align="center">
   <em>Building the future with code! 🚀</em>
